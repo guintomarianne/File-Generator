@@ -81,7 +81,7 @@ Partial Class Form1
         Me.AddressTextBox.Multiline = True
         Me.AddressTextBox.Name = "AddressTextBox"
         Me.AddressTextBox.Size = New System.Drawing.Size(415, 103)
-        Me.AddressTextBox.TabIndex = 4
+        Me.AddressTextBox.TabIndex = 5
         '
         'AgeTextBox
         '
@@ -91,7 +91,7 @@ Partial Class Form1
         Me.AgeTextBox.Multiline = True
         Me.AgeTextBox.Name = "AgeTextBox"
         Me.AgeTextBox.Size = New System.Drawing.Size(84, 35)
-        Me.AgeTextBox.TabIndex = 5
+        Me.AgeTextBox.TabIndex = 4
         '
         'TXTButton
         '
@@ -143,6 +143,7 @@ Partial Class Form1
         Me.Controls.Add(Me.AgeLabel)
         Me.Controls.Add(Me.NameLabel)
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "File Generator"
         Me.ResumeLayout(False)
         Me.PerformLayout()
