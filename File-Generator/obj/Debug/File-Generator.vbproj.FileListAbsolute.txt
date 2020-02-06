@@ -9,3 +9,5 @@ D:\Users\Marianne Guinto\Documents\Visual Studio 2015\Projects\File-Generator\Fi
 D:\Users\Marianne Guinto\Documents\Visual Studio 2015\Projects\File-Generator\File-Generator\bin\Debug\File-Generator.xml
 D:\Users\Marianne Guinto\Documents\Visual Studio 2015\Projects\File-Generator\File-Generator\obj\Debug\File-Generator.exe
 D:\Users\Marianne Guinto\Documents\Visual Studio 2015\Projects\File-Generator\File-Generator\obj\Debug\File-Generator.pdb
+D:\Users\Marianne Guinto\Documents\Visual Studio 2015\Projects\File-Generator\File-Generator\bin\Debug\Newtonsoft.Json.dll
+D:\Users\Marianne Guinto\Documents\Visual Studio 2015\Projects\File-Generator\File-Generator\bin\Debug\Newtonsoft.Json.xml

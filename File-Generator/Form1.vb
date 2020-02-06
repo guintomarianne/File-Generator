@@ -1,6 +1,9 @@
 ﻿Imports System
 Imports System.IO
 Imports System.Xml
+Imports Newtonsoft.Json
+
+
 
 
 Public Class Form1
@@ -23,7 +26,7 @@ Public Class Form1
             sw1.Close()
 
         Else
-            MsgBox("Please input data into boxes", MsgBoxStyle.Critical, "Complete the data")
+            MsgBox("Please input data into the boxes", MsgBoxStyle.Critical, "Complete the data")
         End If
     End Sub
 
@@ -41,7 +44,7 @@ Public Class Form1
             With XmlWrt
                 .WriteStartDocument()
                 .WriteComment("XML File")
-                .WriteStartElement("Personal-Data")
+                .WriteStartElement("Personal_Data")
                 .WriteStartElement("Name")
                 .WriteString(NameTextBox.Text.ToString())
                 .WriteEndElement()
@@ -63,9 +66,41 @@ Public Class Form1
             clearboxes()
 
         Else
-            MsgBox("Please input data into boxes", MsgBoxStyle.Critical, "Complete the data")
+            MsgBox("Please input data into the boxes", MsgBoxStyle.Critical, "Complete the data")
         End If
     End Sub
+
+
+    Private Sub JSONButton_Click(sender As Object, e As EventArgs) Handles JSONButton.Click
+
+        If NameTextBox.Text <> "" Or AgeTextBox.Text <> "" Or AddressTextBox.Text <> "" Then
+            SerializeJsonObj()
+
+            MsgBox("JSON File successfully created!", MsgBoxStyle.Information, "Saved")
+            clearboxes()
+        Else
+            MsgBox("Please input data into the boxes", MsgBoxStyle.Critical, "Complete the data")
+        End If
+
+    End Sub
+
+    Sub SerializeJsonObj()
+        Dim myObj As New JsonObj()
+        myObj.name = NameTextBox.ToString
+        myObj.age = AgeTextBox.ToString
+        myObj.address = AddressTextBox.ToString
+
+        Dim json As String = JsonConvert.SerializeObject(myObj)
+        'Dim filename As String = "../JSONFile_" & System.DateTime.Now.ToString("MMddyyyy_hh_mm_ss") & ".json"
+        Dim file As IO.StreamWriter
+        Dim filename As String = "JSONFile.json"
+        filename = filename.Replace(".json", "_" & System.DateTime.Now.ToString("MMddyyyy_hh_mm_ss") & ".json")
+        file = My.Computer.FileSystem.OpenTextFileWriter(filename, True)
+
+        file.WriteLine(json)
+        file.Close()
+    End Sub
+
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -77,4 +112,5 @@ Public Class Form1
         AddressTextBox.Clear()
 
     End Sub
+
 End Class
