@@ -25,9 +25,9 @@ Partial Class Form1
         Me.NameLabel = New System.Windows.Forms.Label()
         Me.AgeLabel = New System.Windows.Forms.Label()
         Me.AddressLabel = New System.Windows.Forms.Label()
-        Me.Name = New System.Windows.Forms.TextBox()
-        Me.Address = New System.Windows.Forms.TextBox()
-        Me.Age = New System.Windows.Forms.TextBox()
+        Me.NameTextBox = New System.Windows.Forms.TextBox()
+        Me.AddressTextBox = New System.Windows.Forms.TextBox()
+        Me.AgeTextBox = New System.Windows.Forms.TextBox()
         Me.TXTButton = New System.Windows.Forms.Button()
         Me.XMLButton = New System.Windows.Forms.Button()
         Me.JSONButton = New System.Windows.Forms.Button()
@@ -63,29 +63,35 @@ Partial Class Form1
         Me.AddressLabel.TabIndex = 2
         Me.AddressLabel.Text = "Address"
         '
-        'Name
+        'NameTextBox
         '
-        Me.Name.Location = New System.Drawing.Point(107, 12)
-        Me.Name.Multiline = True
-        Me.Name.Name = "Name"
-        Me.Name.Size = New System.Drawing.Size(415, 35)
-        Me.Name.TabIndex = 3
+        Me.NameTextBox.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NameTextBox.Location = New System.Drawing.Point(107, 12)
+        Me.NameTextBox.MaxLength = 50
+        Me.NameTextBox.Multiline = True
+        Me.NameTextBox.Name = "NameTextBox"
+        Me.NameTextBox.Size = New System.Drawing.Size(415, 35)
+        Me.NameTextBox.TabIndex = 3
         '
-        'Address
+        'AddressTextBox
         '
-        Me.Address.Location = New System.Drawing.Point(107, 121)
-        Me.Address.Multiline = True
-        Me.Address.Name = "Address"
-        Me.Address.Size = New System.Drawing.Size(415, 103)
-        Me.Address.TabIndex = 4
+        Me.AddressTextBox.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AddressTextBox.Location = New System.Drawing.Point(107, 124)
+        Me.AddressTextBox.MaxLength = 70
+        Me.AddressTextBox.Multiline = True
+        Me.AddressTextBox.Name = "AddressTextBox"
+        Me.AddressTextBox.Size = New System.Drawing.Size(415, 103)
+        Me.AddressTextBox.TabIndex = 4
         '
-        'Age
+        'AgeTextBox
         '
-        Me.Age.Location = New System.Drawing.Point(107, 65)
-        Me.Age.Multiline = True
-        Me.Age.Name = "Age"
-        Me.Age.Size = New System.Drawing.Size(125, 35)
-        Me.Age.TabIndex = 5
+        Me.AgeTextBox.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AgeTextBox.Location = New System.Drawing.Point(107, 69)
+        Me.AgeTextBox.MaxLength = 3
+        Me.AgeTextBox.Multiline = True
+        Me.AgeTextBox.Name = "AgeTextBox"
+        Me.AgeTextBox.Size = New System.Drawing.Size(84, 35)
+        Me.AgeTextBox.TabIndex = 5
         '
         'TXTButton
         '
@@ -130,9 +136,9 @@ Partial Class Form1
         Me.Controls.Add(Me.JSONButton)
         Me.Controls.Add(Me.XMLButton)
         Me.Controls.Add(Me.TXTButton)
-        Me.Controls.Add(Me.Age)
-        Me.Controls.Add(Me.Address)
-        Me.Controls.Add(Me.Name)
+        Me.Controls.Add(Me.AgeTextBox)
+        Me.Controls.Add(Me.AddressTextBox)
+        Me.Controls.Add(Me.NameTextBox)
         Me.Controls.Add(Me.AddressLabel)
         Me.Controls.Add(Me.AgeLabel)
         Me.Controls.Add(Me.NameLabel)
@@ -146,9 +152,9 @@ Partial Class Form1
     Friend WithEvents NameLabel As Label
     Friend WithEvents AgeLabel As Label
     Friend WithEvents AddressLabel As Label
-    Friend WithEvents Name As TextBox
-    Friend WithEvents Address As TextBox
-    Friend WithEvents Age As TextBox
+    Friend WithEvents NameTextBox As TextBox
+    Friend WithEvents AddressTextBox As TextBox
+    Friend WithEvents AgeTextBox As TextBox
     Friend WithEvents TXTButton As Button
     Friend WithEvents XMLButton As Button
     Friend WithEvents JSONButton As Button
